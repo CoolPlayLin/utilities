@@ -1,6 +1,6 @@
 {
   "name": "@coolplaylin/utilities",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Collection of CoolPlayLin's utilities",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -30,7 +30,7 @@
     "build:dist": "tsup-node",
     "build:types": "tsc --project tsconfig.build.json",
     "release": "bumpp",
-    "prepublishOnly": "runs-s build",
+    "prepublishOnly": "run-s build",
     "lint": "eslint ."
   },
   "repository": {
