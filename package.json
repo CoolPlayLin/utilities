@@ -31,7 +31,8 @@
     "build:types": "tsc --project tsconfig.build.json",
     "release": "bumpp",
     "prepublishOnly": "run-s build",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:update-snapshot": "vitest run -u"
   },
   "repository": {
     "type": "git",

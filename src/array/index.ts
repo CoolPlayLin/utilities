@@ -14,17 +14,20 @@ export function generateUniqueCombinations(
   const result: unknown[] = [];
   const n = arr.length;
 
-  for (let i = 0; i < 1 << n; i++) {
-    const subset: unknown[] = [];
-    for (let j = 0; j < n; j++) {
-      if ((i & (1 << j)) !== 0) {
-        subset.push(arr[j]);
-      }
-    }
-    if (subset.length === size && !result.includes(subset)) {
+  function generateSubset(index: number, subset: unknown[]) {
+    if (subset.length === size) {
       result.push(subset);
+      return;
+    }
+
+    for (let i = index; i < n; i++) {
+      const newSubset = [...subset, arr[i]];
+      generateSubset(i + 1, newSubset);
     }
   }
 
+  generateSubset(0, []);
+
   return result;
 }
+
