@@ -22,6 +22,6 @@ describe("generateUniqueCombinations", () => {
   });
   it("should generate unique combinations when the length of arr >= 30", () => {
     const result = generateUniqueCombinations([...Array(30).keys()], 4);
-    expect(result.length).above(0)
-  })
+    expect(result.length).above(0);
+  });
 });
