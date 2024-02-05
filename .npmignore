@@ -1,0 +1,9 @@
+__tests__
+.github
+tsup.config.ts
+tsconfig.build.json
+tsconfig.json
+pnpm-lock.yaml
+.eslintrc.json
+.gitignore
+.npmignore
